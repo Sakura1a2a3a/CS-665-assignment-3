@@ -1,29 +1,34 @@
 
 | CS-665       | Software Design & Patterns |
 |--------------|----------------------------|
-| Name         | FIRST_NAME LAST_NAME       |
-| Date         | MM/DD/YYYY                 |
+| Name         | Lingxiao Li                |
+| Date         | 03/02/2024                 |
 | Course       | Fall / Spring / Summer     |
 | Assignment # |                            |
 
 # Assignment Overview
-Please add a paragraph or two overviewing the objectives of the assignment.
+This assignment is to implement a email generator which could automatically generate
+different email template based on customer types.
 
 # GitHub Repository Link:
-https://github.com/{YOUR_USERNAME}/cs-665-assignment-{ASSIGNMENT_NUMBER}
+https://github.com/Sakura1a2a3a/CS-665-assignment-3
 
 # Implementation Description 
 
 
 For each assignment, please answer the following:
 
-- Explain the level of flexibility in your implementation, including how new object types can
-be easily added or removed in the future.
-- Discuss the simplicity and understandability of your implementation, ensuring that it is
-easy for others to read and maintain.
-- Describe how you have avoided duplicated code and why it is important.
-- If applicable, mention any design patterns you have used and explain why they were
-chosen.
+- The flexibility shows when adding a new type of customer, all I need is to implement a new customer class
+and a corresponding factory class, and I don't have to edit any original codes.
+- I have one interface for Factories and another interface for customers. As long as implementing each interface
+the classes are easy to maintain. This uncouples the user classes so that it won't need to edit old codes and 
+produce bugs.
+- Again, I abstract the classes by implementing interfaces. Moreover, I make a get factory method to avoid complex 
+if/else statements.
+- This assignment overall is like a factory pattern and some ideas from strategy pattern. Instead of make attribute to
+decide what strategy to use, I make a get Factory method and call write method as we did in facade pattern.
+Another pattern I use is the singleton. To avoid construct a factory for individual customers, I make factories be singleton,
+then it will save a lot of memory.
 
 
 # Maven Commands

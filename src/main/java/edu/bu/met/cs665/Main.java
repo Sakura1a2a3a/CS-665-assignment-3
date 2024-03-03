@@ -1,14 +1,13 @@
 /**
- * Name: FIRST_NAME LAST_NAME
+ * Name: Lingxiao Li
  * Course: CS-665 Software Designs & Patterns
- * Date: MM/DD/YYYY
+ * Date: 03/02/2024
  * File Name: Main.java
- * Description: Write a description for this class
+ * Description: Client class
  */
 
 package edu.bu.met.cs665;
 
-import edu.bu.met.cs665.example1.Person;
 
 /**
  * This is the Main class.
@@ -17,22 +16,21 @@ public class Main {
 
   /**
    * A main method to run examples.
-   * You may use this method for development purposes as you start building your
-   * assignments/final project.  This could prove convenient to test as you are developing.
-   * However, please note that every assignment/final projects requires JUnit tests.
    */
   public static void main(String[] args) {
-    System.out.println("This is a test message from the Main class (Main.java file)");
-  }
+    Customer customerBusiness = new Business();
+    Customer customerReturning = new Returning();
+    Customer customerFrequent = new Frequent();
+    Customer customerNew = new New();
+    Customer customerVip = new Vip();
 
-  /**
-   * This method performs XYZ and returns String.
-   *
-   * @return String
-   */
-  private String doIt() {
-    Person student = new Person("John", "Doe");
-    return student.getLastName() + ',' + student.getFirstName();
+    EmailBuilder builder = new EmailBuilder();
+    System.out.println(builder.write(customerBusiness));
+    System.out.println(builder.write(customerReturning));
+    System.out.println(builder.write(customerFrequent));
+    System.out.println(builder.write(customerNew));
+    System.out.println(builder.write(customerVip));
+
   }
 
 }
